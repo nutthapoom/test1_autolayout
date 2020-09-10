@@ -443,22 +443,26 @@
                                     <action selector="didPressWithSegmentControl:" destination="Mxt-pi-RVt" eventType="valueChanged" id="pmU-ee-3io"/>
                                 </connections>
                             </segmentedControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JD1-QW-3g3">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="644"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JD1-QW-3g3">
+                                <rect key="frame" x="0.0" y="50" width="1024" height="658"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-CD-rB8">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="644"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-CD-rB8">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="658"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="testmiko" translatesAutoresizingMaskIntoConstraints="NO" id="fJ9-4s-TWj">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testmiko" translatesAutoresizingMaskIntoConstraints="NO" id="fJ9-4s-TWj">
                                                 <rect key="frame" x="362" y="20" width="300" height="300"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="UoI-EJ-DO2"/>
+                                                    <constraint firstAttribute="width" constant="300" id="VRr-oa-JkO"/>
+                                                </constraints>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Lorem ipsum " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-5g-RFS" customClass="DesignableTextView" customModule="Test1_AutoLayout" customModuleProvider="target">
-                                                <rect key="frame" x="169" y="328" width="685" height="292"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-5g-RFS" customClass="DesignableTextView" customModule="Test1_AutoLayout" customModuleProvider="target">
+                                                <rect key="frame" x="169.5" y="328" width="685" height="292"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="685" id="NrL-F8-pta"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="292" id="hfl-XW-QMD"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <userDefinedRuntimeAttributes>
@@ -475,15 +479,34 @@
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="fJ9-4s-TWj" firstAttribute="centerX" secondItem="fQx-CD-rB8" secondAttribute="centerX" id="Cqr-bx-Y17"/>
+                                            <constraint firstItem="S6j-5g-RFS" firstAttribute="top" secondItem="fJ9-4s-TWj" secondAttribute="bottom" constant="8" id="Lrv-i2-Qim"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="S6j-5g-RFS" secondAttribute="bottom" constant="38" id="RKY-AM-QRf"/>
+                                            <constraint firstItem="S6j-5g-RFS" firstAttribute="centerX" secondItem="fQx-CD-rB8" secondAttribute="centerX" id="bvq-7x-TZ8"/>
+                                            <constraint firstItem="fJ9-4s-TWj" firstAttribute="top" secondItem="fQx-CD-rB8" secondAttribute="top" constant="20" id="f4a-ea-JAt"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="fQx-CD-rB8" firstAttribute="height" secondItem="JD1-QW-3g3" secondAttribute="height" priority="250" id="JAe-SR-myD"/>
+                                    <constraint firstItem="fQx-CD-rB8" firstAttribute="top" secondItem="JD1-QW-3g3" secondAttribute="top" id="bhE-8c-4qH"/>
+                                    <constraint firstItem="fQx-CD-rB8" firstAttribute="leading" secondItem="JD1-QW-3g3" secondAttribute="leading" id="f2J-vB-NNT"/>
+                                    <constraint firstItem="fQx-CD-rB8" firstAttribute="width" secondItem="JD1-QW-3g3" secondAttribute="width" id="hJA-Mq-UZ3"/>
+                                    <constraint firstAttribute="trailing" secondItem="fQx-CD-rB8" secondAttribute="trailing" id="wdR-eK-C6k"/>
+                                    <constraint firstAttribute="bottom" secondItem="fQx-CD-rB8" secondAttribute="bottom" id="zex-dD-I9R"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="JD1-QW-3g3" firstAttribute="leading" secondItem="mtz-hO-GCS" secondAttribute="leading" id="6NG-bX-FvF"/>
+                            <constraint firstItem="JD1-QW-3g3" firstAttribute="top" secondItem="mtz-hO-GCS" secondAttribute="top" id="Gjb-W1-Zzh"/>
+                            <constraint firstItem="web-MK-hR1" firstAttribute="top" secondItem="JD1-QW-3g3" secondAttribute="bottom" id="NsP-bW-F1N"/>
                             <constraint firstItem="web-MK-hR1" firstAttribute="bottom" secondItem="mtz-hO-GCS" secondAttribute="bottom" id="gEk-Qj-FNs"/>
                             <constraint firstItem="web-MK-hR1" firstAttribute="trailing" secondItem="mtz-hO-GCS" secondAttribute="trailing" id="ipe-sd-9Zz"/>
                             <constraint firstItem="web-MK-hR1" firstAttribute="leading" secondItem="mtz-hO-GCS" secondAttribute="leading" id="rzy-Kr-UUv"/>
+                            <constraint firstItem="JD1-QW-3g3" firstAttribute="trailing" secondItem="mtz-hO-GCS" secondAttribute="trailing" id="vmM-Yr-gog"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mtz-hO-GCS"/>
                     </view>
